@@ -23,6 +23,8 @@ class CalculadoraViewController: UIViewController {
     @IBOutlet weak var pickerView: UIPickerView!{didSet{
         pickerView.isHidden = true
         pickerView.delegate = self
+        pickerView.layer.borderColor = UIColor.lightGray.cgColor
+        pickerView.layer.borderWidth = 2
         }}
     let tipsPercentage = ["5", "10", "15", "20", "25"]
     
@@ -77,6 +79,7 @@ extension CalculadoraViewController: UIPickerViewDelegate, UIPickerViewDataSourc
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         tipTextField.text = tipsPercentage[row]
+        tipTextField.endEditing(true)
         hidePickerView()
     }
 }
