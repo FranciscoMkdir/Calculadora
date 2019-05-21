@@ -18,16 +18,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Prn-UK-MkI">
-                                <rect key="frame" x="10" y="94.5" width="312" height="30"/>
+                                <rect key="frame" x="10" y="94.5" width="284.5" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Importe total de factura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOr-8q-701">
-                                        <rect key="frame" x="0.0" y="0.0" width="189.5" height="30"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="162" height="30"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                         <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gn4-RG-L63">
-                                        <rect key="frame" x="199.5" y="0.0" width="112.5" height="30"/>
+                                        <rect key="frame" x="172" y="0.0" width="112.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
@@ -35,16 +35,16 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XNF-Ae-Zmz">
-                                <rect key="frame" x="10" y="144.5" width="166" height="30"/>
+                                <rect key="frame" x="10" y="144.5" width="154.5" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="% Propina" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwo-mR-o9l">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="68.5" height="30"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                         <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fhb-Ny-LTT">
-                                        <rect key="frame" x="90" y="0.0" width="76" height="30"/>
+                                        <rect key="frame" x="78.5" y="0.0" width="76" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
@@ -58,14 +58,37 @@
                                 <state key="normal" title="Calcular">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="calculate" destination="BYZ-38-t0r" eventType="touchUpInside" id="R6Z-CE-dF2"/>
+                                </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gWk-vC-sYL">
+                                <rect key="frame" x="10" y="286.5" width="355" height="47"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Propina: $0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSn-54-R3e">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="19.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                        <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total a pagar: $0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gka-MZ-2jF">
+                                        <rect key="frame" x="0.0" y="27.5" width="355" height="19.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                        <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="gWk-vC-sYL" firstAttribute="top" secondItem="dd9-sD-1zz" secondAttribute="bottom" constant="40" id="2W2-8a-AdT"/>
                             <constraint firstItem="gn4-RG-L63" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="F3g-AX-Hc9"/>
                             <constraint firstItem="dd9-sD-1zz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.45" id="IAX-1U-B0G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gWk-vC-sYL" secondAttribute="trailing" constant="10" id="RLh-sn-c4e"/>
                             <constraint firstItem="dd9-sD-1zz" firstAttribute="top" secondItem="XNF-Ae-Zmz" secondAttribute="bottom" constant="40" id="Ycj-pv-m3X"/>
                             <constraint firstItem="XNF-Ae-Zmz" firstAttribute="leading" secondItem="Prn-UK-MkI" secondAttribute="leading" id="YlD-EL-q7h"/>
+                            <constraint firstItem="gWk-vC-sYL" firstAttribute="leading" secondItem="XNF-Ae-Zmz" secondAttribute="leading" id="dW0-yB-N7Y"/>
                             <constraint firstItem="XNF-Ae-Zmz" firstAttribute="top" secondItem="Prn-UK-MkI" secondAttribute="bottom" constant="20" id="ioI-7f-HM7"/>
                             <constraint firstItem="dd9-sD-1zz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mtn-fr-HJY"/>
                             <constraint firstItem="Fhb-Ny-LTT" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.2" constant="1" id="sKx-wj-iHm"/>
@@ -75,6 +98,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ior-cH-yhS"/>
+                    <connections>
+                        <outlet property="amountTextField" destination="gn4-RG-L63" id="g73-ZW-siP"/>
+                        <outlet property="amountTotalLabel" destination="Gka-MZ-2jF" id="NFs-zY-oVH"/>
+                        <outlet property="tipLabel" destination="TSn-54-R3e" id="EDH-p0-3el"/>
+                        <outlet property="tipTextField" destination="Fhb-Ny-LTT" id="ydU-wr-Arn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
