@@ -80,12 +80,12 @@
                                 </subviews>
                             </stackView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6XN-hs-aNh">
-                                <rect key="frame" x="0.0" y="533.5" width="375" height="133.5"/>
+                                <rect key="frame" x="0.0" y="434" width="375" height="233"/>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6XN-hs-aNh" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="22K-r3-2j3"/>
+                            <constraint firstItem="6XN-hs-aNh" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.35" id="22K-r3-2j3"/>
                             <constraint firstItem="gWk-vC-sYL" firstAttribute="top" secondItem="dd9-sD-1zz" secondAttribute="bottom" constant="40" id="2W2-8a-AdT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6XN-hs-aNh" secondAttribute="bottom" id="8oL-WY-0hR"/>
                             <constraint firstItem="gn4-RG-L63" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="F3g-AX-Hc9"/>

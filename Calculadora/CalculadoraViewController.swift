@@ -41,6 +41,9 @@ class CalculadoraViewController: UIViewController {
             showErrorAlert(message: "Porfavor escriba el importe a pagar")
             return
         }
+        let totalTip = (Double(amount) ?? 0) * (percentage / 100)
+        tipLabel.text = String(format: "Propina: $%.2f", totalTip)
+        amountTotalLabel.text = String(format: "Total a pagar: $%.2f", totalTip + Double(amount)!)
     }
     
     
@@ -108,4 +111,18 @@ extension CalculadoraViewController: UITextFieldDelegate{
             hidePickerView()
         }
     }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == amountTextField{
+            guard let amount = textField.text else {return true}
+            let countdots = amount.components(separatedBy: ".").count - 1
+            if countdots > 0 && string == "." {
+                return false
+            }
+            return true
+        }else{
+            return true
+        }
+    }
 }
+
