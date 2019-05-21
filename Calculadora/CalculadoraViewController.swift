@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CalculadoraViewController.swift
 //  Calculadora
 //
 //  Created by macbook on 21/05/19.
@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CalculadoraViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        title = "Calculadora de propinas"
     }
+    
 
+   
 
 }
-
