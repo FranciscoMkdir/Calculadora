@@ -30,7 +30,7 @@ class CalculadoraViewController: UIViewController {
         pickerView.layer.borderColor = UIColor.lightGray.cgColor
         pickerView.layer.borderWidth = 2
         }}
-    let tipsPercentage = ["5", "10", "15", "20", "25"]
+    let tipsPercentage = ["5", "10", "15", "20", "25", "30", "35"] // holis
     
     override func viewDidLoad() {
         super.viewDidLoad()
