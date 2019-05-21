@@ -9,6 +9,10 @@
 import UIKit
 
 class CalculadoraViewController: UIViewController {
+    @IBOutlet weak var buttonCalculate: UIButton!{didSet{
+        buttonCalculate.layer.cornerRadius = 4
+        buttonCalculate.clipsToBounds = true
+        }}
     @IBOutlet weak var amountTextField: UITextField!{didSet{
         amountTextField.delegate = self
         addDoneButtonOnKeyboard(textField: amountTextField)

@@ -108,6 +108,7 @@
                     <connections>
                         <outlet property="amountTextField" destination="gn4-RG-L63" id="g73-ZW-siP"/>
                         <outlet property="amountTotalLabel" destination="Gka-MZ-2jF" id="NFs-zY-oVH"/>
+                        <outlet property="buttonCalculate" destination="dd9-sD-1zz" id="cYG-OV-pkK"/>
                         <outlet property="pickerView" destination="6XN-hs-aNh" id="udj-tp-OJ1"/>
                         <outlet property="tipLabel" destination="TSn-54-R3e" id="EDH-p0-3el"/>
                         <outlet property="tipTextField" destination="Fhb-Ny-LTT" id="ydU-wr-Arn"/>
