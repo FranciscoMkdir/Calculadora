@@ -9,22 +9,34 @@
 import UIKit
 
 class CalculadoraViewController: UIViewController {
-    @IBOutlet weak var amountTextField: UITextField!
-    @IBOutlet weak var tipTextField: UITextField!
+    @IBOutlet weak var amountTextField: UITextField!{didSet{
+        amountTextField.delegate = self
+        addDoneButtonOnKeyboard(textField: amountTextField)
+        }}
+    @IBOutlet weak var tipTextField: UITextField!{didSet{
+        tipTextField.delegate = self
+        tipTextField.inputView = UIView()
+        tipTextField.tintColor = UIColor.clear
+        }}
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var amountTotalLabel: UILabel!
-    
+    @IBOutlet weak var pickerView: UIPickerView!{didSet{
+        pickerView.isHidden = true
+        pickerView.delegate = self
+        }}
+    let tipsPercentage = ["5", "10", "15", "20", "25"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Calculadora de propinas"
-        amountTextField.delegate = self
-        addDoneButtonOnKeyboard(textField: amountTextField)
     }
     
     @IBAction func calculate() {
         view.endEditing(true)
-        guard let amount = amountTextField.text else {return}
+        hidePickerView()
+        guard let amount = amountTextField.text,
+              let tip = tipTextField.text,
+              let percentage = Double(tip) else {return}
         if amount.isEmpty{
             showErrorAlert(message: "Porfavor escriba el importe a pagar")
             return
@@ -37,8 +49,34 @@ class CalculadoraViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Aceptar", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func showPickerView(){
+        pickerView.isHidden = false
+    }
+    
+    func hidePickerView(){
+        pickerView.isHidden = true
+    }
 }
 
+extension CalculadoraViewController: UIPickerViewDelegate, UIPickerViewDataSource{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return tipsPercentage.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return tipsPercentage[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        tipTextField.text = tipsPercentage[row]
+        hidePickerView()
+    }
+}
 
 extension CalculadoraViewController: UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -61,5 +99,13 @@ extension CalculadoraViewController: UITextFieldDelegate{
     
     @objc func doneButtonAction() {
         self.view.endEditing(true)
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == tipTextField{
+            showPickerView()
+        }else{
+            hidePickerView()
+        }
     }
 }

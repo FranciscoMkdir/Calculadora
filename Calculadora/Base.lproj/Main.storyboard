@@ -79,10 +79,15 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6XN-hs-aNh">
+                                <rect key="frame" x="0.0" y="533.5" width="375" height="133.5"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6XN-hs-aNh" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="22K-r3-2j3"/>
                             <constraint firstItem="gWk-vC-sYL" firstAttribute="top" secondItem="dd9-sD-1zz" secondAttribute="bottom" constant="40" id="2W2-8a-AdT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6XN-hs-aNh" secondAttribute="bottom" id="8oL-WY-0hR"/>
                             <constraint firstItem="gn4-RG-L63" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="F3g-AX-Hc9"/>
                             <constraint firstItem="dd9-sD-1zz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.45" id="IAX-1U-B0G"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gWk-vC-sYL" secondAttribute="trailing" constant="10" id="RLh-sn-c4e"/>
@@ -91,7 +96,9 @@
                             <constraint firstItem="gWk-vC-sYL" firstAttribute="leading" secondItem="XNF-Ae-Zmz" secondAttribute="leading" id="dW0-yB-N7Y"/>
                             <constraint firstItem="XNF-Ae-Zmz" firstAttribute="top" secondItem="Prn-UK-MkI" secondAttribute="bottom" constant="20" id="ioI-7f-HM7"/>
                             <constraint firstItem="dd9-sD-1zz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mtn-fr-HJY"/>
+                            <constraint firstItem="6XN-hs-aNh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="okg-E6-zxb"/>
                             <constraint firstItem="Fhb-Ny-LTT" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.2" constant="1" id="sKx-wj-iHm"/>
+                            <constraint firstItem="6XN-hs-aNh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="stk-8k-h4e"/>
                             <constraint firstItem="Prn-UK-MkI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="tq5-UU-vAI"/>
                             <constraint firstItem="Prn-UK-MkI" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.3" id="y2L-D9-Q2M"/>
                         </constraints>
@@ -101,13 +108,14 @@
                     <connections>
                         <outlet property="amountTextField" destination="gn4-RG-L63" id="g73-ZW-siP"/>
                         <outlet property="amountTotalLabel" destination="Gka-MZ-2jF" id="NFs-zY-oVH"/>
+                        <outlet property="pickerView" destination="6XN-hs-aNh" id="udj-tp-OJ1"/>
                         <outlet property="tipLabel" destination="TSn-54-R3e" id="EDH-p0-3el"/>
                         <outlet property="tipTextField" destination="Fhb-Ny-LTT" id="ydU-wr-Arn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="934" y="793"/>
+            <point key="canvasLocation" x="933.60000000000002" y="792.95352323838085"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ACm-0j-xZR">
